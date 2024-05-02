@@ -17,5 +17,11 @@
   "devDependencies": {
     "@babel/core": "^7.20.0"
   },
-  "private": true
+  "private": true,
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": ["standard", "standard-jsx", "standard-react"],
+    "include": ["./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.js"],
+    "exclude": ["node_modules/**", "build/**", "coverage/**"]
+  }
 }
