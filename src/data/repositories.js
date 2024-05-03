@@ -57,7 +57,7 @@ export const data = [
   {
     id: "6",
     fullName: "CodeMasterpiece",
-    description: "Mastering the art of coding",
+    description: "Mastering the art of coding label label label label",
     language: "JavaScript",
     forksCount: 150,
     stargazersCount: 1,

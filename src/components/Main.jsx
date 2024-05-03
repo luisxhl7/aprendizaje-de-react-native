@@ -6,16 +6,21 @@ import RepositoryList from './RepositoryList';
 const Main = () => {
   return (
     <View style={styles.container}>
-        <Text style={{textAlign: 'center', fontSize:30}}>GitHubs</Text>
-        <RepositoryList/>
+      <Text style={styles.title}>GitHubs</Text>
+      <RepositoryList/>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-    container: {
-        marginTop: Constants.statusBarHeight,
-    },
+  container: {
+    marginTop: Constants.statusBarHeight,
+  },
+  title: {
+    textAlign: 'center', 
+    fontSize: 30,
+    fontWeight: 'bold'
+  }
 });
 
 export default Main
