@@ -1,20 +1,20 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native';
+import Constants from "expo-constants";
+import RepositoryList from './RepositoryList';
 
 const Main = () => {
   return (
     <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+        <Text style={{textAlign: 'center', fontSize:30}}>GitHubs</Text>
+        <RepositoryList/>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
+        marginTop: Constants.statusBarHeight,
     },
 });
 
