@@ -15,5 +15,10 @@ export default theme = {
     fontWeights: {
         normal: 300,
         bold: 700
+    },
+    appBar: {
+        primary: '#24292e',
+        textPrimary: '#fff',
+        textSecondary: '#999'
     }
 }

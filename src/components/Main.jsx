@@ -1,26 +1,27 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native';
-import Constants from "expo-constants";
+import { StyleSheet, Switch, Text, View } from 'react-native';
 import RepositoryList from './RepositoryList';
+import AppBar from './AppBar';
+import { Navigate, Route, Routes } from 'react-router-native';
 
 const Main = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>GitHubs</Text>
-      <RepositoryList/>
+      <AppBar/>
+      <Routes>
+        <Route path='/' element={<RepositoryList />} />
+        <Route path='/signin' element={<Text>Sign In</Text>} />
+        <Route path='*' element={<Navigate to='/' />} />
+      </Routes>      
+      {/* <RepositoryList/> */}
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: Constants.statusBarHeight,
+    flexGrow: 1
   },
-  title: {
-    textAlign: 'center', 
-    fontSize: 30,
-    fontWeight: 'bold'
-  }
 });
 
 export default Main
